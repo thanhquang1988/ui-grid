@@ -206,7 +206,7 @@ module.service('rowSorter', ['$parse', 'uiGridConstants', function ($parse, uiGr
       var strA = a.toString().toLowerCase(),
           strB = b.toString().toLowerCase();
 
-      return strA === strB ? 0 : strA.localeCompare(strB);
+      return strA < strB ? -1 : ( strA > strB ? 1 : 0);
     }
   };
 
